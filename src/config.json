@@ -1,5 +1,5 @@
 {
-  "port": 8080,
+  "port": 80,
   "bodyLimit": "1kb",
   "ethereumNetwork": "https://rinkeby.infura.io/v3/3fe7c90a4ec34aae900a7900d3fb48dc"
 }
