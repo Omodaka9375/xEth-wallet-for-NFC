@@ -14,8 +14,8 @@
     "test": "eslint src",
     "debug": "npm run prestart && node --nolazy --inspect-brk=9229 dist"
   },
-  "repository": "wingleung/ethereum-wallet-api-example",
-  "author": "Wing Leung <damianleung@gmail.com>",
+  "repository": "https://git.heroku.com/xeth.git",
+  "author": "Omodaka9375",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.13.3",
