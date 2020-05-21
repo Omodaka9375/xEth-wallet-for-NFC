@@ -4,11 +4,17 @@
   "description": "a basic example of an API for managing an ethereum wallet",
   "main": "dist",
   "engines": {
-    "node": "11.x"
+    "node": "11.x",
+    "npm": "6.13.x"
   },
   "scripts": {
-    "start": "nodemon -w src --exec \"babel-node src\""
-   },
+    "dev": "nodemon -w src --exec \"babel-node src\"",
+    "build": "babel src -s -D -d dist",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src",
+    "debug": "npm run prestart && node --nolazy --inspect-brk=9229 dist"
+  },
   "repository": "https://git.heroku.com/xeth.git",
   "author": "Omodaka9375",
   "license": "MIT",
@@ -20,9 +26,7 @@
     "morgan": "^1.8.0",
     "scrypt": "^6.0.3",
     "web3": "^1.0.0-beta.34",
-    "winston": "^2.4.2"
-  },
-  "devDependencies": {
+    "winston": "^2.4.2",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
