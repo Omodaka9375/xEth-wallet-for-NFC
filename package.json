@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "a basic example of an API for managing an ethereum wallet",
   "main": "dist",
+  "engines": {
+    "node": "11.x"
+  },
   "scripts": {
     "dev": "nodemon -w src --exec \"babel-node src\"",
     "build": "babel src -s -D -d dist",
