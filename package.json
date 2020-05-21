@@ -7,13 +7,8 @@
     "node": "11.x"
   },
   "scripts": {
-    "dev": "nodemon -w src --exec \"babel-node src\"",
-    "build": "babel src -s -D -d dist",
-    "start": "node dist",
-    "prestart": "npm run -s build",
-    "test": "eslint src",
-    "debug": "npm run prestart && node --nolazy --inspect-brk=9229 dist"
-  },
+    "start": "nodemon -w src --exec \"babel-node src\""
+   },
   "repository": "https://git.heroku.com/xeth.git",
   "author": "Omodaka9375",
   "license": "MIT",
