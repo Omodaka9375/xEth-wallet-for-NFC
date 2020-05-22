@@ -10,9 +10,11 @@ const getBalance = ({ params: { ethAddress = null } }, res) => {
   );
 };
 
-const transaction = ({ body }, res) => {
+//const transaction = ({ body }, res) => {
+const transaction = ({ params: {privateKey=null,destination=null,amount=0} }, res) => {
   logger.info(body)
-  WalletService.transaction(body).then(
+//  WalletService.transaction({privateKey,destination,amount}).then(
+  WalletService.transaction({privateKey,destination,amount}).then(
     transaction => res.send(transaction),
     error => res.status(error.errorCode || 200).send(error)
   );
