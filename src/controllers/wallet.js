@@ -12,7 +12,7 @@ const getBalance = ({ params: { ethAddress = null } }, res) => {
 };
 
 const transaction = ({ req }, res) => {
-  logger.info(req.body.amount);
+  logger.info(req.amount);
   WalletService.transaction(req).then(
 
     transaction => res.send(transaction),
