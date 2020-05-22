@@ -39,7 +39,7 @@ const transaction = ({ privateKey, destination, amount }) => {
   return new Promise((resolve, reject) => {
     let account = null;
 
-    logger.info(privateKey,destination, amount)
+    logger.info(privateKey + ', ' + destination + ', ' + amount)
     if (
       !privateKey ||
       !amount ||
