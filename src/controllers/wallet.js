@@ -10,14 +10,12 @@ const getBalance = ({ params: { ethAddress = null } }, res) => {
   );
 };
 
-//const transaction = ({ body }, res) => {
-const transaction = ({ params: {privateKey=null,destination=null,amount=0} }, res) => {
-  logger.info(body)
-//  WalletService.transaction({privateKey,destination,amount}).then(
-  WalletService.transaction({privateKey,destination,amount}).then(
+const transaction = ({ body }, res) => {
+  WalletService.transaction(body).then(
     transaction => res.send(transaction),
     error => res.status(error.errorCode || 200).send(error)
   );
 };
+
 
 export { create, getBalance, transaction };
