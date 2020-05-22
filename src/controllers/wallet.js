@@ -1,4 +1,6 @@
 import * as WalletService from '../services/wallet';
+import logger from '../utils/logger';
+
 
 const create = (req, res) => res.send(WalletService.create());
 
@@ -9,8 +11,10 @@ const getBalance = ({ params: { ethAddress = null } }, res) => {
   );
 };
 
-const transaction = ({ body }, res) => {
-  WalletService.transaction(body).then(
+const transaction = ({ req }, res) => {
+  logger.info(req.body.amount);
+  WalletService.transaction(req).then(
+
     transaction => res.send(transaction),
     error => res.status(error.errorCode || 200).send(error)
   );
