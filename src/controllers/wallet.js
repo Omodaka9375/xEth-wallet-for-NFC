@@ -1,5 +1,4 @@
 import * as WalletService from '../services/wallet';
-import logger from '../utils/logger';
 
 const create = (req, res) => res.send(WalletService.create());
 

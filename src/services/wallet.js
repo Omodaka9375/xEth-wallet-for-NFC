@@ -35,9 +35,12 @@ const getBalance = (ethAddress = null) => {
   });
 };
 
-const transaction = ({ privateKey, destination, amount }) => {
+const transaction = ({ body }) => {
   return new Promise((resolve, reject) => {
     let account = null;
+    var privateKey = body.privateKey;
+    var destination = body.destination;
+    var amount = body.amount;
 
     logger.info(privateKey + ', ' + destination + ', ' + amount)
     if (
