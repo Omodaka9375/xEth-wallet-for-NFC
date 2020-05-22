@@ -12,6 +12,6 @@ router.post('/transaction', transaction);
 
 router.get('/health', (req, res) => res.send({ version }));
 
-router.get('*', (req, res) => res.send('use one of the valid endpoints'));
+router.get('*', (req, res) => res.send('.'));
 
 export default router;
