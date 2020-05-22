@@ -38,7 +38,7 @@ const getBalance = (ethAddress = null) => {
 const transaction = ({ privateKey, destination, amount }) => {
   return new Promise((resolve, reject) => {
     let account = null;
-
+    console.log(privateKey,destination, amount)
     if (
       !privateKey ||
       !amount ||
