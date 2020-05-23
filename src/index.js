@@ -9,7 +9,8 @@ import routes from './routes';
 
 const PORT = process.env.PORT || port;
 const app = express();
-
+app.use(express.urlencoded());
+app.use(express.json());
 app.use(helmet({ noCache: true }));
 
 app.use(morgan('dev'));
