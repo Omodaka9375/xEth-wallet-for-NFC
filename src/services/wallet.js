@@ -1,6 +1,7 @@
 import Web3 from 'web3';
 import logger from '../utils/logger';
 import { ethereumNetwork } from '../config.json';
+import { log } from 'winston/lib/winston/common';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(ethereumNetwork));
 
@@ -37,6 +38,7 @@ const getBalance = (ethAddress = null) => {
 
 const transaction = ({ privateKey, destination, amount }) => {
   return new Promise((resolve, reject) => {
+    logger.info(privateKey + ', ' + destination + ', ' + amount);
     let account = null;
    if (
       !privateKey ||
