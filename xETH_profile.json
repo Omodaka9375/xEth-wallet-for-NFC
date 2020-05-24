@@ -1,0 +1,316 @@
+[
+    {
+        "tasks.profile.name": "ETH wallet",
+        "tasks.profile.date": "20200523T035144",
+        "tasks.profile.length": 25,
+        "tasks.profile.size": 828,
+        "tasks.profile.data": [
+            {
+                "tasks.profile.fields": {
+                    "field1": "WALLET",
+                    "field2": "  "
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "837",
+                    "itemTask": "[{VAR_WALLET}]  ",
+                    "itemDescription": "WALLET\n  "
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "BALANCE",
+                    "field2": "  "
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "837",
+                    "itemTask": "[{VAR_BALANCE}]  ",
+                    "itemDescription": "BALANCE\n  "
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "TXHASH",
+                    "field2": "  "
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "837",
+                    "itemTask": "[{VAR_TXHASH}]  ",
+                    "itemDescription": "TXHASH\n  "
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "xETH Payway",
+                    "field3": "Get balance=1;Send ETH=2;Receive ETH=3;Create ETH address=4;",
+                    "field2": "CHOICE"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "846",
+                    "itemTask": "xETH Payway|CHOICE|Get balance=1;Send ETH=2;Receive ETH=3;Create ETH address=4;",
+                    "itemDescription": "Question: xETH Payway\nVariable: {VAR_CHOICE}\nAnswers :\nText: Get balance \/ Value: 1\nText: Send ETH \/ Value: 2\nText: Receive ETH \/ Value: 3\nText: Create ETH address \/ Value: 4"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_CHOICE}",
+                    "field3": "1",
+                    "field2": "1"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "930",
+                    "itemTask": "{VAR_CHOICE}|1|1",
+                    "itemDescription": "If values are equals\n{VAR_CHOICE}\n1\nPerform the tasks below"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_BALANCEURL}",
+                    "field3": "",
+                    "field2": "0",
+                    "field5": "true",
+                    "field4": "BALANCE"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "114",
+                    "itemTask": "{VAR_BALANCEURL}|0||BALANCE|1",
+                    "itemDescription": "{VAR_BALANCEURL}\nMethod: GET\nSave result in a variable: {VAR_BALANCE}\nWait until the end of the request to continue"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "Your ETH balance:",
+                    "field2": "{VAR_BALANCE}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "86",
+                    "itemTask": "[Your ETH balance:]{VAR_BALANCE}",
+                    "itemDescription": "Your ETH balance:\n{VAR_BALANCE}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "1"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "90",
+                    "itemTask": "",
+                    "itemDescription": "Close your conditional block"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_CHOICE}",
+                    "field3": "1",
+                    "field2": "2"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "930",
+                    "itemTask": "{VAR_CHOICE}|2|1",
+                    "itemDescription": "If values are equals\n{VAR_CHOICE}\n2\nPerform the tasks below"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "Send ETH to:",
+                    "field3": "DESTINATION",
+                    "field2": "ETH address of receiver:"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "841",
+                    "itemTask": "Send ETH to:|ETH address of receiver:|DESTINATION",
+                    "itemDescription": "Title : Send ETH to:\nMessage : ETH address of receiver:\nVariable name : DESTINATION"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "Set amount:",
+                    "field3": "AMOUNT",
+                    "field2": "Amount:"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "841",
+                    "itemTask": "Set amount:|Amount:|AMOUNT",
+                    "itemDescription": "Title : Set amount:\nMessage : Amount:\nVariable name : AMOUNT"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_TRANSACTURL}",
+                    "field3": "privateKey={VAR_PRIVATEKEY};destination={VAR_DESTINATION};amount={VAR_AMOUNT};",
+                    "field2": "TXHASH"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "111",
+                    "itemTask": "{VAR_TRANSACTURL}|TXHASH|privateKey={VAR_PRIVATEKEY};destination={VAR_DESTINATION};amount={VAR_AMOUNT};",
+                    "itemDescription": "Request: {VAR_TRANSACTURL}\nVariable: {VAR_TXHASH}\nPOST parameters :\nName: privateKey \/ Value: {VAR_PRIVATEKEY}\nName: destination \/ Value: {VAR_DESTINATION}\nName: amount \/ Value: {VAR_AMOUNT}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "4"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "819",
+                    "itemTask": "5",
+                    "itemDescription": "5 seconds"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_TXHASH}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "818",
+                    "itemTask": "{VAR_TXHASH}",
+                    "itemDescription": "{VAR_TXHASH}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "Transaction processed:",
+                    "field2": "{VAR_TXHASH}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "86",
+                    "itemTask": "[Transaction processed:]{VAR_TXHASH}",
+                    "itemDescription": "Transaction processed:\n{VAR_TXHASH}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "1"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "90",
+                    "itemTask": "",
+                    "itemDescription": "Close your conditional block"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_CHOICE}",
+                    "field3": "1",
+                    "field2": "3"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "930",
+                    "itemTask": "{VAR_CHOICE}|3|1",
+                    "itemDescription": "If values are equals\n{VAR_CHOICE}\n3\nPerform the tasks below"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_ADDRESS}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "818",
+                    "itemTask": "{VAR_ADDRESS}",
+                    "itemDescription": "{VAR_ADDRESS}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "Your ETH address:",
+                    "field2": "{VAR_ADDRESS}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "86",
+                    "itemTask": "[Your ETH address:]{VAR_ADDRESS}",
+                    "itemDescription": "Your ETH address:\n{VAR_ADDRESS}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "1"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "90",
+                    "itemTask": "",
+                    "itemDescription": "Close your conditional block"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_CHOICE}",
+                    "field3": "1",
+                    "field2": "4"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "930",
+                    "itemTask": "{VAR_CHOICE}|4|1",
+                    "itemDescription": "If values are equals\n{VAR_CHOICE}\n4\nPerform the tasks below"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_CREATEURL}",
+                    "field3": "",
+                    "field2": "0",
+                    "field5": "true",
+                    "field4": "WALLET"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "114",
+                    "itemTask": "{VAR_CREATEURL}|0||WALLET|1",
+                    "itemDescription": "{VAR_CREATEURL}\nMethod: GET\nSave result in a variable: {VAR_WALLET}\nWait until the end of the request to continue"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "Your new ETH address:",
+                    "field2": "{VAR_WALLET}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "86",
+                    "itemTask": "[Your new ETH address:]{VAR_WALLET}",
+                    "itemDescription": "Your new ETH address:\n{VAR_WALLET}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "{VAR_WALLET}"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "818",
+                    "itemTask": "{VAR_WALLET}",
+                    "itemDescription": "{VAR_WALLET}"
+                }
+            },
+            {
+                "tasks.profile.fields": {
+                    "field1": "1"
+                },
+                "tasks.profile.config": {
+                    "itemTaskExtra": "",
+                    "requestType": "90",
+                    "itemTask": "",
+                    "itemDescription": "Close your conditional block"
+                }
+            }
+        ]
+    }
+]
