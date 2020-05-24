@@ -141,8 +141,8 @@ The "app" has 25 tasks and total 828 bytes.
 
 We configured app to work on Rinkeby test net, so it’s safe to play with.
 
-If you want to use it on Mainnet, just copy that Infura API mainet end-point, and 
-copy it to your 'config.json' file.
+If you want to use it on Mainnet, just get that Infura API mainet end-point, and 
+copy it to your 'src/config.json' file.
 
 ## License
 
