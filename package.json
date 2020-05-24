@@ -23,7 +23,7 @@
     "compression": "^1.5.2",
     "express": "^4.13.3",
     "helmet": "^3.12.1",
-    "morgan": "^1.8.0",
+    "morgan": "^1.9.1",
     "scrypt": "^6.0.3",
     "web3": "^1.0.0-beta.34",
     "winston": "^2.4.2",
