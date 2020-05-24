@@ -147,3 +147,7 @@ copy it to your 'config.json' file.
 ## License
 
 MIT
+
+## Contributions
+
+Thanks to @wingleung for simple api code https://github.com/wingleung/ethereum-wallet-api-example
