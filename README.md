@@ -104,7 +104,7 @@ The "app" has 25 tasks and total 828 bytes.
 # Open NFC Tasks app and go to Settings/User variables and create next important five variables and fill in with your details:
 
 - ADDRESS # put your public address on ETH here
-- PRIVATEKEY # put private key here encrypted with password
+- PRIVATEKEY # put private key here (soon support encrypted with password)
 - BALANCEURL # put balance endpoint here, eg.: https://<your-host>/getBalance/<your-eth-public-address>
 - TRANSACTURL # put transaction endpoint here, eg.: https://<your-host>/transaction
 - CREATEURL # put your create endpoin here, eg.: https://<your-host>/createWallet
@@ -133,6 +133,15 @@ The "app" has 25 tasks and total 828 bytes.
 
 [![xETH demo](https://img.youtube.com/vi/k4gaIoJ8-uo/0.jpg)](https://www.youtube.com/watch?v=k4gaIoJ8-uo)
 
+## Security tips
+- Whitelisting your nfc chip
+- Using password encrypted private key (soon)
+- Using SSL to communicate to app
+
+We configured app to work on Rinkeby test net, so it’s safe to play with.
+
+If you want to use it on Mainnet, just copy that Infura API mainet end-point, and 
+copy it to your 'config.json' file.
 
 ## License
 
