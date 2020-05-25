@@ -12,7 +12,7 @@ Example of simple Ethereum API server with endpoints, and a client NFC app.
 # Go to https://infura.io/ and get your ETH API key.
 # It looks like this: 
 # https://rinkeby.infura.io/v3/3fe7c90a4ec34aae900a7900d3fb48dc
- # You can use mine for test, but it's free so please create your own at https://infura.io/
+# You can use mine for test, but it's free so please create your own at https://infura.io/
 # Put your key in 'src/config.json' under 'ethereumNetwork'
 ```
 
