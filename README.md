@@ -1,5 +1,7 @@
 # xETH wallet for NFC
 
+![Screenshot](FlRGjciVp3fbWDvvOGdVFcuFTef2-bup52br6.jpeg)
+
 Example of simple Ethereum API server with endpoints, and a client NFC app.
 
 * `/createWallet` create an ethereum wallet
